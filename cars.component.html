@@ -1,0 +1,20 @@
+ 
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-6 mb-4" *ngFor="let car of cars">
+            <div class="car-card">
+                <img [src] = "car.image" alt="{{car.brand}} {{car.model}}">
+                <h2>{{ car.brand }} {{ car.model }} {{ car.year }}</h2>
+                <div class="car-details">
+                    <p><strong>Price/Day:</strong> Rs.{{ car.pricePerDay }}</p>
+                    <p><strong>Fuel Type:</strong>{{ car.fuelType }}</p>
+                    <p><strong>Seating Capacity:</strong>{{ car.seatingCapacity }}</p>
+                    <p><strong>Mileage:</strong>{{ car.mileage }}</p>
+                    <p><strong>Color:</strong>{{ car.color }}</p>
+                    <p><strong>AC:</strong>{{ car.ac ? 'Yes' : 'No' }}</p>
+                </div>
+                <button class="book-btn" [routerLink]="['/login']">Book Now</button>
+            </div>
+        </div>
+    </div>
+</div>

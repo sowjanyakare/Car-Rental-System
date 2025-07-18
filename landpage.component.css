@@ -1,0 +1,24 @@
+.background-wrapper {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .background-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/baleno.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Only the image is transparent */
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2; /* Keeps content above the image */
+    padding: 100px 20px;
+  }
+  
+  
